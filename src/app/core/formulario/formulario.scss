@@ -1,0 +1,56 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 2px solid black;
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    width: 30%;
+    border-radius: 5px;
+    border-bottom: 15px solid black;
+}
+
+input,
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    margin-top: 20px;
+    padding: 20px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .container{
+        border-bottom: 15px solid black;
+    }
+    form {
+        gap: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 0;
+    }
+}

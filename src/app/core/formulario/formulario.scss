@@ -43,20 +43,21 @@ button {
 }
 
 @media (max-width: 600px) {
-    .container {
-        margin-right: 5px;
-        margin-left: 5px;
-        margin-top: 15px;
-        margin-bottom: 15px;
 
+    .container {
+        height: 100%;
+        margin: 0;
+        box-sizing: border-box;
     }
 
     form {
         gap: 20px;
         width: 100%;
-        min-height: 100vh;
+        height: 100%;
+        min-height: 0;
         box-sizing: border-box;
         border: none;
         border-radius: 0;
+        overflow-y: auto;
     }
 }

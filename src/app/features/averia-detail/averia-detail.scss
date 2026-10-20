@@ -1,0 +1,94 @@
+.averia {
+    border: 2px solid black;
+    margin: 30px;
+    margin-left: 120px;
+    margin-right: 120px;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 5px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-bottom: 1px solid lightgrey;
+
+        h4 {
+            width: 15%;
+            text-align: center;
+            border: 1px solid red;
+            border-radius: 5px;
+            padding: 5px;
+            color: red;
+        }
+    }
+
+    .description {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-bottom: 1px solid lightgrey;
+
+    }
+
+    .picture {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        p {
+            text-align: center;
+            width: 100%;
+            padding: 50px;
+            border: 1px dotted grey;
+            border-radius: 5px;
+        }
+
+        button {
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            padding: 10px 50px 10px 50px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .averia {
+        border: none;
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+
+        .title {
+            gap: 20px;
+
+            h4 {
+                padding: 15px;
+                width: 100%;
+            }
+        }
+
+        .description {
+            p {
+                margin-bottom: 5px;
+            }
+        }
+
+        .picture {
+            p {
+                padding: 70px;
+            }
+
+            button {
+                padding: 15px 30px 15px 30px;
+            }
+        }
+    }
+}

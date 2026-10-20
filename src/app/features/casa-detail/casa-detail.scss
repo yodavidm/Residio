@@ -1,0 +1,143 @@
+.detail {
+    display: flex;
+    height: 100vh;
+
+    .sidebar {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+
+        .calle {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .inquilinos {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            border-bottom: 1px solid lightgrey;
+            padding: 10px;
+        }
+    }
+
+    .token {
+        margin-top: 30px;
+
+        .token-card {
+            display: flex;
+            align-items: center;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        p {
+            margin-top: 20px;
+            color: grey;
+        }
+    }
+
+    .main {
+        border-left: 1px solid lightgrey;
+        padding: 30px;
+        width: 80%;
+
+        .title {
+            display: flex;
+            align-items: center;
+            grid-area: 20px;
+            gap: 20px;
+
+            p {
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+
+        .cards {
+            cursor: pointer;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    .sidebar-movil {
+        display: none;
+    }
+
+    .main-movil {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .detail {
+        flex-direction: column;
+        height: auto;
+        align-items: stretch;
+
+        .sidebar,
+        .main {
+            display: none;
+        }
+
+        .sidebar-movil {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            box-sizing: border-box;
+            gap: 10px;
+            padding: 15px;
+            justify-content: space-between;
+
+            .casa,
+            .token-movil {
+                display: flex;
+                align-items: center;
+                font-size: small;
+            }
+
+            .casa {
+                gap: 10px;
+            }
+
+            .token-movil {
+                padding: 5px;
+                border: 1px solid lightgray;
+                border-radius: 5px;
+            }
+        }
+
+        .main-movil {
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            font-size: small;
+
+            .title-movil {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                h1{
+                    font-size: large;
+                }
+            }
+
+            .cards-movil {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    }
+
+}

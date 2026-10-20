@@ -1,0 +1,71 @@
+<app-nav></app-nav>
+<div class="detail">
+    <div class="sidebar">
+        <div class="casa-info">
+            <div class="calle">
+                <h1>🏠</h1>
+                <div class="info">
+                    <h3>Calle Mayor 12</h3>
+                    <p>Madrid, 28013</p>
+                </div>
+            </div>
+            <div class="inquilinos">
+                <h1>🤵</h1>
+                <p>Inquilinos: 3</p>
+            </div>
+        </div>
+        <div class="token">
+            <div class="token-card">
+                <div class="token-info">
+                    <h2>Token:</h2>
+                    <h1>A7X9K2</h1>
+                </div>
+                <h1>📄</h1>
+            </div>
+            <p>Comparte este token con los inquilinos para que puedan reportar averías.</p>
+        </div>
+
+
+    </div>
+
+    <!-- MODO MÓVIL-->
+    <div class="sidebar-movil">
+        <div class="casa">
+            <h1>🏠</h1>
+            <div class="casa-movil">
+                <h3>Calle Mayor 12</h3>
+                <h4>Inquilinos: 3</h4>
+            </div>
+        </div>
+        <div class="token-movil">
+            <p>Token: A7X9BK2</p>
+            <h1>📄</h1>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="title">
+            <h1>Averías</h1>
+            <p>🔎 2 pendientes</p>
+        </div>
+        <div class="cards" routerLink="/averia">
+            <app-casa-detail-card></app-casa-detail-card>
+            <app-casa-detail-card></app-casa-detail-card>
+            <app-casa-detail-card></app-casa-detail-card>
+        </div>
+    </div>
+
+    <!--MODO MÓVIL-->
+    <div class="main-movil">
+        <div class="title-movil">
+            <h1>Averías</h1>
+            <p>🔎 2 pendientes</p>
+        </div>
+        <div class="cards-movil" routerLink="/averia">
+            <app-casa-detail-card></app-casa-detail-card>
+            <app-casa-detail-card></app-casa-detail-card>
+            <app-casa-detail-card></app-casa-detail-card>
+        </div>
+    </div>
+
+</div>

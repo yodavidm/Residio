@@ -2,10 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NgForm, FormsModule } from '@angular/forms';
 import { Averia } from '../../infrastructure/averia/request/averia';
+import { IonContent, IonIcon } from '@ionic/angular';
 
 @Component({
   selector: 'app-formulario',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, IonContent, IonIcon],
   templateUrl: './formulario.html',
   styleUrl: './formulario.scss',
 })

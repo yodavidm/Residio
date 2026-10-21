@@ -1,11 +1,11 @@
 import { Location } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { IonButtons, IonBackButton, IonToolbar, IonHeader } from '@ionic/angular';
 
 
 @Component({
   selector: 'app-nav',
-  imports: [RouterLink],
+  imports: [ IonButtons, IonBackButton, IonToolbar, IonHeader],
   templateUrl: './nav.html',
   styleUrl: './nav.scss',
 })

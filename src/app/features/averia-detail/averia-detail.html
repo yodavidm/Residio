@@ -1,17 +1,46 @@
-<app-nav></app-nav>
-<div class="averia">
-    <div class="title">
-        <h4>PENDIENTE</h4>
-        <h1>Fuga en el grifo</h1>
-        <p>📍 Estancia: BAÑO</p>
-    </div>
+<ion-content>
+    <app-nav></app-nav>
+    <div class="averia">
 
-    <div class="description">
-        <p>Descripción: <br><br>Se observa una fuga constante de agua en el grifo del lavabo. El agua cae sobre la pileta y moja la zona inferior.</p>
-        <p>🗓️ Creada: 18/10/2026</p>
+        <div class="title">
+            <ion-badge>PENDIENTE</ion-badge>
+            <h1>Fuga en el grifo</h1>
+            <span class="pin">
+                <ion-icon name="pin-outline"></ion-icon>
+                <p>Estancia: BAÑO</p>
+            </span>
+        </div>
+
+        <div class="description">
+            <p>
+                <strong>Descripción:</strong>
+                <br>
+                <br>
+                Se observa una fuga constante de agua en el grifo del lavabo.
+                El agua cae sobre la pileta y moja la zona inferior.
+            </p>
+            <br>
+            <span class="calendar">
+                <ion-icon name="calendar-outline"></ion-icon>
+                <p>Creada: 18/10/2026</p>
+            </span>
+        </div>
+
+        <!--Esta es la condición real @if (foto) { -->
+        @if (!foto) {
+        <div class="picture">
+            <img src="../../../assets/grifo.jpg" alt="foto">
+        </div>
+        }
+        @else {
+        <div class="no-picture">
+            <ion-icon name="image-outline"></ion-icon>
+            <p>Sin fotografías adjuntas</p>
+        </div>
+        }
+
+        <ion-button expand="block" class="add-button">
+            Marcar como resuelta
+        </ion-button>
     </div>
-    <div class="picture">
-        <p>Foto opcional</p>
-        <button>Marcar como resuelta</button>
-    </div>
-</div>
+</ion-content>

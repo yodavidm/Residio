@@ -1,143 +1,85 @@
+ion-content {
+    --background: #f6f8fc;
+}
+
 .detail {
+    padding: 15px;
+}
+
+/* Vivienda y token */
+.sidebar-movil {
+    margin: 0 0 25px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.casa {
     display: flex;
-    height: 100vh;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 0 15px;
+}
 
-    .sidebar {
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        width: 20%;
+.casa>ion-icon {
+    font-size: 30px;
+    color: #3880ff;
+}
 
-        .calle {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            padding: 10px;
-        }
+.casa-movil h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
 
-        .inquilinos {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            border-bottom: 1px solid lightgrey;
-            padding: 10px;
-        }
-    }
+.casa-movil h4 {
+    margin: 0;
+    color: #778197;
+    font-size: 13px;
+    font-weight: 400;
+}
 
-    .token {
-        margin-top: 30px;
+.token-movil {
+    --background: #f6f8fc;
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    --min-height: 45px;
+    border-radius: 8px;
+    font-size: 13px;
+}
 
-        .token-card {
-            display: flex;
-            align-items: center;
-            border: 1px solid lightgrey;
-            border-radius: 5px;
-            padding: 20px;
-            justify-content: space-between;
-        }
+.token-movil ion-icon {
+    color: #3880ff;
+}
 
-        p {
-            margin-top: 20px;
-            color: grey;
-        }
-    }
+/* Averías */
+.main-movil {
+    padding: 0 2px;
+}
 
-    .main {
-        border-left: 1px solid lightgrey;
-        padding: 30px;
-        width: 80%;
+.title-movil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
 
-        .title {
-            display: flex;
-            align-items: center;
-            grid-area: 20px;
-            gap: 20px;
-
-            p {
-                border: 1px solid black;
-                padding: 5px;
-                border-radius: 5px;
-            }
-        }
-
-        .cards {
-            cursor: pointer;
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-    }
-
-    .sidebar-movil {
-        display: none;
-    }
-
-    .main-movil {
-        display: none;
+    p {
+        font-size: small;
     }
 }
 
-@media (max-width: 600px) {
-    .detail {
-        flex-direction: column;
-        height: auto;
-        align-items: stretch;
+.title-movil h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 22px;
+    font-weight: 800;
+}
 
-        .sidebar,
-        .main {
-            display: none;
-        }
-
-        .sidebar-movil {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            box-sizing: border-box;
-            gap: 10px;
-            padding: 15px;
-            justify-content: space-between;
-
-            .casa,
-            .token-movil {
-                display: flex;
-                align-items: center;
-                font-size: small;
-            }
-
-            .casa {
-                gap: 10px;
-            }
-
-            .token-movil {
-                padding: 5px;
-                border: 1px solid lightgray;
-                border-radius: 5px;
-            }
-        }
-
-        .main-movil {
-            display: flex;
-            flex-direction: column;
-            padding: 15px;
-            font-size: small;
-
-            .title-movil {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                h1{
-                    font-size: large;
-                }
-            }
-
-            .cards-movil {
-                margin-top: 15px;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-        }
-    }
-
+.cards-movil {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }

@@ -19,6 +19,25 @@ form {
     border-bottom: 15px solid black;
 }
 
+.upload {
+    border: 2px dashed #ccc;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+
+    p {
+        opacity: 50%;
+
+    }
+}
+
+.upload ion-icon {
+    font-size: 40px;
+    opacity: 50%;
+
+}
+
 input,
 textarea,
 select {

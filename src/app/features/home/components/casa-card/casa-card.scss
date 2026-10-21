@@ -1,62 +1,55 @@
 :host {
+    display: block;
     width: 100%;
 }
 
-.card {
-    cursor: pointer;
-    border: 1px solid lightgray;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 5px;
-
-    h1 {
-        font-size: 40px;
-    }
-
-    .left {
-        display: flex;
-        gap: 40px;
-        align-items: center;
-
-        p {
-            margin-top: 10px;
-        }
-    }
-
-    .right {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-
-        p {
-            border: 1px solid red;
-            color: red;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: rgba(255, 0, 0, 0.092);
-        }
-    }
+ion-card {
+    margin: 0;
+    box-shadow: none;
+    transition: transform 0.15s ease;
+    background-color: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 12px;
 }
 
-@media (max-width: 600px) {
-    .card {
-        padding: 12px;
-        gap: 10px;
+ion-card:active {
+    transform: scale(0.98);
+}
 
-        h3,p{
-            font-size: small;
-        }
-    }
+ion-card-content {
+    padding: 12px;
+}
 
-    .card .left,
-    .card .right {
-        gap: 10px;
-    }
+ion-item {
+    --background: transparent;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+}
 
-    .card .right p {
-        padding: 6px;
-        font-size: x-small;
-    }
+ion-label h2 {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ion-icon{
+        color: #3880ff;
+
+}
+
+ion-label p {
+    margin-top: 8px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ion-badge {
+    margin-right: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color:#ffcf3160;
+    font-weight: normal;
 }

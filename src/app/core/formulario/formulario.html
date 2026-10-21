@@ -15,9 +15,12 @@
             <option value="cocina">Cocina</option>
         </select>
 
-        <input type="file" accept="image/*" (change)="seleccionarFoto($event)">
-
-        <button type="submit">Registrar avería</button>
+        <div class="upload" (click)="fileInput.click()">
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+            <p>Añadir imagen <br>(opcional)</p>
+            <input #fileInput type="file" accept="image/*" hidden (change)="seleccionarFoto($event)">
+        </div>
+        <button type="submit">Registrar incidencia</button>
 
     </form>
 </div>

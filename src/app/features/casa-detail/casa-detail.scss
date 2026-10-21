@@ -49,6 +49,11 @@ ion-content {
     --min-height: 45px;
     border-radius: 8px;
     font-size: 13px;
+
+    ion-label {
+        color: #172033;
+
+    }
 }
 
 .token-movil ion-icon {
@@ -66,16 +71,20 @@ ion-content {
     justify-content: space-between;
     margin-bottom: 18px;
 
+    ion-icon {
+        color: #172033;
+    }
+
+    h1 {
+        margin: 0;
+        color: #172033;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
     p {
         font-size: small;
     }
-}
-
-.title-movil h1 {
-    margin: 0;
-    color: #172033;
-    font-size: 22px;
-    font-weight: 800;
 }
 
 .cards-movil {

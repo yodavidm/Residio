@@ -7,6 +7,7 @@ import {
   IonButton,
   IonContent
 } from '@ionic/angular';
+import { Nav } from '../../core/nav/nav';
 @Component({
   selector: 'app-home',
   imports: [IonHeader,
@@ -14,7 +15,7 @@ import {
     IonTitle,
     IonButton,
     IonContent,
-    CasaCard],
+    CasaCard, Nav],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

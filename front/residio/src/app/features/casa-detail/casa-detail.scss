@@ -1,0 +1,94 @@
+ion-content {
+    --background: #f6f8fc;
+}
+
+.detail {
+    padding: 15px;
+}
+
+/* Vivienda y token */
+.sidebar-movil {
+    margin: 0 0 25px;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 14px;
+    box-shadow: none;
+}
+
+.casa {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 5px 0 15px;
+}
+
+.casa>ion-icon {
+    font-size: 30px;
+    color: #3880ff;
+}
+
+.casa-movil h3 {
+    margin: 0 0 6px;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.casa-movil h4 {
+    margin: 0;
+    color: #778197;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.token-movil {
+    --background: #f6f8fc;
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    --min-height: 45px;
+    border-radius: 8px;
+    font-size: 13px;
+
+    ion-label {
+        color: #172033;
+
+    }
+}
+
+.token-movil ion-icon {
+    color: #3880ff;
+}
+
+/* Incidencias */
+.main-movil {
+    padding: 0 2px;
+}
+
+.title-movil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+
+    ion-icon {
+        color: #172033;
+    }
+
+    h1 {
+        margin: 0;
+        color: #172033;
+        font-size: 22px;
+        font-weight: 800;
+    }
+
+    p {
+        font-size: small;
+    }
+}
+
+.cards-movil {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}

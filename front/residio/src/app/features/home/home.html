@@ -1,0 +1,27 @@
+<ion-toolbar>
+    <ion-title><img src="../../../assets/resi-logo.png" alt="logo"> Residio<span>.</span></ion-title>
+</ion-toolbar>
+
+<ion-content>
+    <div class="home">
+
+        <div class="welcome">
+            <p [class]="claseTitulo">{{ mensajeTitulo }}</p>
+            <h1>Hola David</h1>
+            <span>{{ mensajeIncidencias }}</span>
+        </div>
+        <ion-button class="add-button">Añadir vivienda</ion-button>
+
+        <div class="section-header">
+            <h2>Tus propiedades</h2>
+            <span>3 viviendas</span>
+        </div>
+
+        <div class="cards">
+            <app-casa-card></app-casa-card>
+            <app-casa-card></app-casa-card>
+            <app-casa-card></app-casa-card>
+        </div>
+
+    </div>
+</ion-content>

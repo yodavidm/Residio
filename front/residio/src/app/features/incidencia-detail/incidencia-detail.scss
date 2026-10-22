@@ -1,0 +1,103 @@
+ion-content {
+    --background: #f6f8fc;
+
+}
+
+.incidencia {
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid #e5e9f2;
+    padding: 30px;
+    margin: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid lightgrey;
+
+    ion-badge {
+        align-self: flex-start;
+        background-color: #ffcf3160;
+        border-radius: 6px;
+    }
+}
+
+
+.title h1 {
+    margin: 0;
+    color: #172033;
+    font-size: 24px;
+}
+
+.title p,
+.description p,
+.calendar,
+.pin {
+    color: #778197;
+}
+
+.description {
+    padding: 10px 0;
+    border-bottom: 1px solid lightgrey;
+}
+
+.calendar,
+.pin {
+    display: flex;
+    gap: 5px;
+}
+
+.picture {
+    height: 250px;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 15px;
+
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
+
+.no-picture {
+    border: 2px dashed #ccc;
+    border-radius: 6px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    color: #778197;
+
+    ion-icon {
+        font-size: 36px;
+
+        p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+    }
+}
+
+ion-footer {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    ion-toolbar {
+        --background: #172033;
+    }
+
+    .add-button {
+        color: #ffffff;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,41 @@
+ion-card {
+    margin: 0;
+    border: 1px solid #e5e9f2;
+    border-radius: 12px;
+    box-shadow: none;
+    background: white;
+}
+
+ion-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+}
+
+ion-badge {
+    font-size: 10px;
+    border-radius: 6px;
+    background-color: #ffcf3160;
+    color: #172033;
+}
+
+h2 {
+    margin: 8px 0;
+    color: #172033;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.info p {
+    margin: 0;
+    color: #778197;
+    font-size: 13px;
+}
+
+.date {
+    color: #778197;
+    font-size: 12px;
+    white-space: nowrap;
+}

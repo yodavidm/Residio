@@ -1,0 +1,63 @@
+:host {
+    display: block;
+    width: 100%;
+}
+
+ion-card {
+    margin: 0;
+    box-shadow: none;
+    transition: transform 0.15s ease;
+    background-color: white;
+    border: 1px solid #e5e9f2;
+    border-radius: 12px;
+}
+
+ion-card:active {
+    transform: scale(0.98);
+}
+
+ion-card-content {
+    padding: 12px;
+}
+
+ion-item {
+    --background: transparent;
+    --padding-start: 0;
+    --inner-padding-end: 0;
+
+    ion-icon {
+        color: #172033;
+    }
+}
+
+ion-label h2 {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #172033;
+
+}
+
+ion-icon {
+    color: #3880ff;
+
+}
+
+ion-label p {
+    margin-top: 8px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+ion-badge {
+    margin-right: 12px;
+    padding: 8px;
+    border-radius: 6px;
+    background-color: #ffcf3160;
+    font-weight: normal;
+    color: #172033;
+
+}

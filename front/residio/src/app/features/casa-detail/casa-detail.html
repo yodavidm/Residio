@@ -1,0 +1,34 @@
+<ion-content>
+    <app-nav></app-nav>
+    <div class="detail">
+
+        <ion-card class="sidebar-movil">
+            <div class="casa">
+                <ion-icon name="home-outline"></ion-icon>
+                <div class="casa-movil">
+                    <h3>Calle Mayor 12</h3>
+                    <h4>3 Inquilinos</h4>
+                </div>
+            </div>
+
+            <ion-item lines="none" class="token-movil" (click)="copyToken()">
+                <ion-label>Copiar enlace de acceso</ion-label>
+                <ion-icon name="document-text-outline" slot="end"></ion-icon>
+            </ion-item>
+        </ion-card>
+
+        <div class="main-movil">
+            <div class="title-movil">
+                <h1>Incidencias</h1>
+                <ion-icon name="funnel-outline"></ion-icon>
+            </div>
+
+            <div class="cards-movil" routerLink="/incidencia">
+                <app-casa-detail-card></app-casa-detail-card>
+                <app-casa-detail-card></app-casa-detail-card>
+                <app-casa-detail-card></app-casa-detail-card>
+            </div>
+        </div>
+
+    </div>
+</ion-content>

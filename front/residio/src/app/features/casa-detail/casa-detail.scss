@@ -63,6 +63,18 @@ ion-content {
 /* Incidencias */
 .main-movil {
     padding: 0 2px;
+
+}
+
+ion-popover {
+    --background: #ffffff;
+    --color: #172033;
+
+    ion-item {
+        --background: #ffffff;
+        --color: #172033;
+        --border-color: #e5e7eb;
+    }
 }
 
 .title-movil {
@@ -90,5 +102,5 @@ ion-content {
 .cards-movil {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    margin-top: 20px;
 }

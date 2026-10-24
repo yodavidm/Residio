@@ -5,6 +5,7 @@ export abstract class CasaRepositoryPort {
 
     abstract findAll(): Observable<Casa[]>;
     abstract findById(id:number): Observable<Casa>
+    abstract getNumPendientes(id:number):Observable<number>
 
 
 }

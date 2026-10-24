@@ -4,10 +4,11 @@ import { IonContent, IonBadge, IonIcon, IonFooter, IonToolbar, IonButton, ToastC
 import { IncidenciaService } from '../service/incidencia.service';
 import { ActivatedRoute } from '@angular/router';
 import { Incidencia } from '../../core/domain/Incidencia';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-incidencia-detail',
-  imports: [Nav, IonContent, IonBadge, IonIcon, IonFooter, IonToolbar, IonButton],
+  imports: [Nav, IonContent, IonBadge, IonIcon, IonFooter, IonToolbar, IonButton, DatePipe],
   templateUrl: './incidencia-detail.html',
   styleUrl: './incidencia-detail.scss',
 })
@@ -30,7 +31,8 @@ export class IncidenciaDetail implements OnInit {
     estado: '',
     estancia: '',
     casaId: 0,
-    createdAt: new Date()
+    createdAt: new Date(),
+    foto: ''
   };
 
 
@@ -52,7 +54,7 @@ export class IncidenciaDetail implements OnInit {
       next: async () => {
         const toast = await this.toastController.create({
           message: 'Incidencia marcada como resuelta',
-          duration: 2500,
+          duration: 1200,
           position: 'top',
           cssClass: 'toast-residio',
           icon: 'checkmark-circle-outline'

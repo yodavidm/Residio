@@ -6,6 +6,6 @@
             <p>Estancia: {{incidencia.estancia}}</p>
         </div>
 
-        <p class="date">18/10/2026</p>
+        <p class="date">{{ incidencia.createdAt | date:'dd/MM/yyyy' }}</p>
     </ion-card-content>
 </ion-card>

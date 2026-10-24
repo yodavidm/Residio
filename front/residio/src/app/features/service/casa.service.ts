@@ -16,4 +16,8 @@ export class CasaService {
         return this.casaRepositoryPort.findById(id);
     }
 
+    getNumPendientes(id:number):Observable<number>{
+        return this.casaRepositoryPort.getNumPendientes(id);
+    }
+
 }

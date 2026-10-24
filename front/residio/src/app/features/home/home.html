@@ -19,7 +19,7 @@
 
         <div class="cards">
             @for (casa of casas; track casa.id) {
-            <app-casa-card [casa]="casa"></app-casa-card>
+            <app-casa-card [casa]="casa" [pendientes]="pendientesPorCasa[casa.id] ?? 0"></app-casa-card>
             }
         </div>
 

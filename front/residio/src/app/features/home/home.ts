@@ -25,6 +25,9 @@ export class Home implements OnInit {
   private casaService: CasaService = inject(CasaService);
 
   ngOnInit(): void {
+  }
+
+  ionViewWillEnter() {
     this.getMensajes();
     this.getCasas();
   }
@@ -37,7 +40,7 @@ export class Home implements OnInit {
 
   claseTitulo: string = '';
 
-  @Input() casa!: Casa;
+  pendientesPorCasa: { [id: number]: number } = {};
 
   private getMensajes() {
     if (this.totalIncidencias === 0) {
@@ -55,11 +58,29 @@ export class Home implements OnInit {
     }
   }
 
+
   getCasas() {
     this.casaService.getCasas().subscribe({
       next: (data) => {
         this.casas = data;
+
+        data.forEach(casa => {
+          this.casaService.getNumPendientes(casa.id).subscribe({
+            next: (num) => {
+              this.pendientesPorCasa[casa.id] = num;
+              this.actualizarTotalIncidencias();
+            }
+          });
+        });
       }
-    })
+    });
   }
+
+  private actualizarTotalIncidencias() {
+    this.totalIncidencias = Object.values(this.pendientesPorCasa)
+      .reduce((total, pendientes) => total + pendientes, 0);
+
+    this.getMensajes();
+  }
+
 }

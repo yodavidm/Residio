@@ -3,7 +3,7 @@ import { Nav } from '../../core/nav/nav';
 import { CasaCard } from '../home/components/casa-card/casa-card';
 import { CasaDetailCard } from './components/casa-detail-card/casa-detail-card';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { IonBadge, IonIcon, IonLabel, IonItem, IonCard, IonContent, ToastController, IonButton } from '@ionic/angular';
+import { IonBadge, IonIcon, IonLabel, IonItem, IonCard, IonContent, ToastController, IonButton, IonPopover, IonList } from '@ionic/angular';
 import { Casa } from '../../core/domain/Casa';
 import { CasaService } from '../service/casa.service';
 import { IncidenciaService } from '../service/incidencia.service';
@@ -11,7 +11,7 @@ import { Incidencia } from '../../core/domain/Incidencia';
 
 @Component({
   selector: 'app-casa-detail',
-  imports: [Nav, CasaDetailCard, RouterLink, IonIcon, IonLabel, IonItem, IonCard, IonContent],
+  imports: [Nav, CasaDetailCard, RouterLink, IonIcon, IonLabel, IonItem, IonCard, IonContent, IonPopover, IonList],
   templateUrl: './casa-detail.html',
   styleUrl: './casa-detail.scss',
 })
@@ -32,6 +32,7 @@ export class CasaDetail {
   };
 
   incidencias: Incidencia[] = [];
+  filtro: string = 'Todas';
 
   @Input() incidencia!: Incidencia;
 
@@ -50,7 +51,7 @@ export class CasaDetail {
 
     const toast = await this.toastController.create({
       message: 'Enlace copiado en el portapapeles',
-      duration: 2500,
+      duration: 1200,
       position: 'top',
       cssClass: 'toast-residio',
       icon: 'checkmark-circle-outline'
@@ -75,5 +76,18 @@ export class CasaDetail {
     })
   }
 
+  filtrar(estado: string) {
+    this.filtro = estado;
+  }
+
+  get incidenciasFiltradas() {
+    if (this.filtro === 'Todas') {
+      return this.incidencias;
+    }
+
+    return this.incidencias.filter(
+      incidencia => incidencia.estado === this.filtro
+    );
+  }
 
 }

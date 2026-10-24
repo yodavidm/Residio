@@ -5,6 +5,9 @@ const config: CapacitorConfig = {
   appId: 'es.damarlo.residio',
   appName: 'residio',
   webDir: 'dist/residio/browser',
+  android: {
+    allowMixedContent: true
+  },
   plugins: {
     SplashScreen: {
       launchShowDuration: 2000,

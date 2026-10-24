@@ -56,9 +56,13 @@ ion-label p {
 ion-badge {
     margin-right: 12px;
     padding: 8px;
-    border-radius: 6px;
-    background-color: #ffcf3160;
-    font-weight: normal;
+    border-radius: 10px;
+    background-color: #ff313160;
+    font-weight: bold;
     color: #172033;
+
+    span{
+        font-size: medium;
+    }
 
 }

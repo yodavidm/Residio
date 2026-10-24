@@ -20,10 +20,27 @@
         <div class="main-movil">
             <div class="title-movil">
                 <h1>Incidencias</h1>
-                <ion-icon name="funnel-outline"></ion-icon>
+                <ion-icon name="funnel-outline" id="filtro-incidencias">
+                </ion-icon>
+
+                <ion-popover trigger="filtro-incidencias" triggerAction="click" [translucent]="false" side="left">
+                    <ng-template>
+                        <ion-list>
+                            <ion-item button (click)="filtrar('Todas')">
+                                Todas
+                            </ion-item>
+                            <ion-item button (click)="filtrar('Pendiente')">
+                                Pendientes
+                            </ion-item>
+                            <ion-item button (click)="filtrar('Resuelta')">
+                                Resueltas
+                            </ion-item>
+                        </ion-list>
+                    </ng-template>
+                </ion-popover>
             </div>
 
-            @for (incidencia of incidencias; track incidencia.id) {
+            @for (incidencia of incidenciasFiltradas; track incidencia.id) {
             <div class="cards-movil" [routerLink]="['incidencia', incidencia.id]">
                 <app-casa-detail-card [incidencia]="incidencia"></app-casa-detail-card>
             </div>

@@ -21,7 +21,7 @@
             <br>
             <span class="calendar">
                 <ion-icon name="calendar-outline"></ion-icon>
-                <p>Creada: {{incidencia.createdAt}}</p>
+                <p>Creada: {{ incidencia.createdAt | date:'dd/MM/yyyy' }}</p>
             </span>
         </div>
 
@@ -42,13 +42,17 @@
 
 </ion-content>
 <ion-footer class="footer">
-    @if (!resuelto){
-    <ion-toolbar>
 
+    <ion-toolbar>
+        @if (!resuelto){
         <ion-button expand="block" class="add-button" (click)="resolve()">
             <p>Marcar como resuelta</p>
         </ion-button>
-
+        }@else {
+        <ion-button expand="block" class="add-button" disabled>
+            <p>Incidencia resuelta</p>
+        </ion-button>
+        }
     </ion-toolbar>
-    }
+
 </ion-footer>

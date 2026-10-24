@@ -2,6 +2,7 @@ import { Injectable, inject } from "@angular/core";
 import { IncidenciaRepositoryPort } from "../../application/ports/incidencia.repository.port";
 import { Observable } from "rxjs";
 import { Incidencia } from "../../core/domain/Incidencia";
+import { IncidenciaRequest } from "../../infrastructure/incidencia/request/incidencia-request";
 
 @Injectable({ providedIn: 'root' })
 export class IncidenciaService {
@@ -18,6 +19,14 @@ export class IncidenciaService {
 
     resolve(id:number): Observable<Incidencia>{
         return this.incidenciaRepositoryPort.resolve(id);
+    }
+
+    create(request:IncidenciaRequest):Observable<Incidencia>{
+        return this.incidenciaRepositoryPort.create(request);
+    }
+
+    getCasaIdByToken(token:string):Observable<number>{
+        return this.incidenciaRepositoryPort.findCasaIdByToken(token);
     }
 
 

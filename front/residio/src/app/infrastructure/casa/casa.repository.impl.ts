@@ -19,14 +19,17 @@ export class CasaRepositoryImpl extends CasaRepositoryPort {
     override findAll(): Observable<Casa[]> {
         //return this.http.get<Casa[]>(this.baseUrl);
         return this.http.get<Casa[]>(this.baseUrlMovil);
-
     }
 
     override findById(id: number): Observable<Casa> {
         //return this.http.get<Casa>(this.baseUrl + '/' + id);
         return this.http.get<Casa>(this.baseUrlMovil + '/' + id);
-
     }
+
+    override getNumPendientes(id: number): Observable<number> {
+        return this.http.get<number>(this.baseUrlMovil + '/incidencias/pendientes/' + id);
+    }
+
 
 
 }

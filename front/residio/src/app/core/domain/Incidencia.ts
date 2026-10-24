@@ -5,6 +5,7 @@ export class Incidencia{
     descripcion!:string;
     estado!:string;
     estancia!:string;
+    foto!:string;
     createdAt!:Date;
     casaId!:number;
 }

@@ -23,18 +23,13 @@
                 <ion-icon name="funnel-outline" id="filtro-incidencias">
                 </ion-icon>
 
-                <ion-popover trigger="filtro-incidencias" triggerAction="click" [translucent]="false" side="left">
+                <ion-popover trigger="filtro-incidencias" triggerAction="click" [translucent]="false" side="left"
+                    color="light" #popover>
                     <ng-template>
                         <ion-list>
-                            <ion-item button (click)="filtrar('Todas')">
-                                Todas
-                            </ion-item>
-                            <ion-item button (click)="filtrar('Pendiente')">
-                                Pendientes
-                            </ion-item>
-                            <ion-item button (click)="filtrar('Resuelta')">
-                                Resueltas
-                            </ion-item>
+                            <ion-item button (click)="filtrar('Todas', popover)">Todas</ion-item>
+                            <ion-item button (click)="filtrar('Pendiente', popover)">Pendientes</ion-item>
+                            <ion-item button (click)="filtrar('Resuelta', popover)">Resueltas</ion-item>
                         </ion-list>
                     </ng-template>
                 </ion-popover>

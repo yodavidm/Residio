@@ -33,6 +33,7 @@ export class CasaDetail {
 
   incidencias: Incidencia[] = [];
   filtro: string = 'Todas';
+  popoverAbierto: boolean = false;
 
   @Input() incidencia!: Incidencia;
 
@@ -76,8 +77,9 @@ export class CasaDetail {
     })
   }
 
-  filtrar(estado: string) {
+  filtrar(estado: string, popover: IonPopover) {
     this.filtro = estado;
+    popover.dismiss();
   }
 
   get incidenciasFiltradas() {

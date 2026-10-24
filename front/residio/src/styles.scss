@@ -13,3 +13,16 @@ body {
   --ion-background-color: #ffffff;
   --ion-text-color: #000000;
 }
+.toast-residio {
+  --background: #172033;
+  --color: #ffffff;
+  --border-radius: 16px;
+  --box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  --button-color: #ffffff;
+
+  --start: 12px;
+  --end: 12px;
+
+  font-size: 14px;
+  font-weight: 500;
+}

@@ -6,7 +6,9 @@ import { Formulario } from './core/formulario/formulario';
 
 export const routes: Routes = [
     { path: '', component: Home },
-    { path: 'detalle', component: CasaDetail },
+    { path: 'casa', component: CasaDetail },
     { path: 'incidencia', component: IncidenciaDetail },
-    { path: 'formulario', component: Formulario }
+    { path: 'formulario/:token', component: Formulario },
+    { path: 'casa/:id', component: CasaDetail },
+    { path: 'casa/:id/incidencia/:id', component: IncidenciaDetail }
 ];

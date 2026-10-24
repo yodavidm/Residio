@@ -1,10 +1,9 @@
-<ion-card button="true" routerLink="detalle">
-    <ion-card-content>
+<ion-card button="true" [routerLink]="['casa', casa.id]"> <ion-card-content>
         <ion-item lines="none">
             <ion-label>
                 <h2> <ion-icon name="home-outline" slot="start"></ion-icon>
-                    Calle Mayor 12</h2>
-                <p><ion-icon name="people-outline"></ion-icon>3 Inquilinos</p>
+                    {{casa.direccion}}</h2>
+                <p><ion-icon name="people-outline"></ion-icon>{{casa.inquilinos}} inquilino</p>
             </ion-label>
             <ion-badge>3 pendientes</ion-badge>
             <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>

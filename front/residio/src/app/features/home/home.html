@@ -14,13 +14,13 @@
 
         <div class="section-header">
             <h2>Tus propiedades</h2>
-            <span>3 viviendas</span>
+            <span>{{casas.length}} vivienda</span>
         </div>
 
         <div class="cards">
-            <app-casa-card></app-casa-card>
-            <app-casa-card></app-casa-card>
-            <app-casa-card></app-casa-card>
+            @for (casa of casas; track casa.id) {
+            <app-casa-card [casa]="casa"></app-casa-card>
+            }
         </div>
 
     </div>

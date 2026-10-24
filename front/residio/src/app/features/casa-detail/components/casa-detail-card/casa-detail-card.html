@@ -1,9 +1,9 @@
 <ion-card>
     <ion-card-content>
         <div class="info">
-            <ion-badge>PENDIENTE</ion-badge>
-            <h2>Fuga en el grifo</h2>
-            <p>Estancia: BAÑO</p>
+            <ion-badge [class]="claseEstado">{{incidencia.estado}}</ion-badge>
+            <h2>{{incidencia.titulo}}</h2>
+            <p>Estancia: {{incidencia.estancia}}</p>
         </div>
 
         <p class="date">18/10/2026</p>

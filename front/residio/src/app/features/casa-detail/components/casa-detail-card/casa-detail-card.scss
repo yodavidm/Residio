@@ -17,8 +17,15 @@ ion-card-content {
 ion-badge {
     font-size: 10px;
     border-radius: 6px;
-    background-color: #ffcf3160;
     color: #172033;
+}
+
+.pendiente {
+    --background: #ff313160;
+}
+
+.resuelta {
+    --background: #31ff3160;
 }
 
 h2 {

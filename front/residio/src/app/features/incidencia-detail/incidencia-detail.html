@@ -3,11 +3,11 @@
     <div class="incidencia">
 
         <div class="title">
-            <ion-badge>PENDIENTE</ion-badge>
-            <h1>Fuga en el grifo</h1>
+            <ion-badge [classList]="claseEstado">{{incidencia.estado}}</ion-badge>
+            <h1>{{incidencia.titulo}}</h1>
             <span class="pin">
                 <ion-icon name="pin-outline"></ion-icon>
-                <p>Estancia: BAÑO</p>
+                <p>Estancia: {{incidencia.estancia}}</p>
             </span>
         </div>
 
@@ -16,18 +16,16 @@
                 <strong>Descripción:</strong>
                 <br>
                 <br>
-                Se observa una fuga constante de agua en el grifo del lavabo.
-                El agua cae sobre la pileta y moja la zona inferior.
+                {{incidencia.descripcion}}
             </p>
             <br>
             <span class="calendar">
                 <ion-icon name="calendar-outline"></ion-icon>
-                <p>Creada: 18/10/2026</p>
+                <p>Creada: {{incidencia.createdAt}}</p>
             </span>
         </div>
 
-        <!--Esta es la condición real @if (foto) { -->
-        @if (!foto) {
+        @if (foto) {
         <div class="picture">
             <img src="../../../assets/grifo.jpg" alt="foto">
         </div>
@@ -44,7 +42,13 @@
 
 </ion-content>
 <ion-footer class="footer">
+    @if (!resuelto){
     <ion-toolbar>
-        <p class="add-button">Marcar como resuelta</p>
+
+        <ion-button expand="block" class="add-button" (click)="resolve()">
+            <p>Marcar como resuelta</p>
+        </ion-button>
+
     </ion-toolbar>
+    }
 </ion-footer>

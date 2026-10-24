@@ -20,10 +20,19 @@ ion-content {
 
     ion-badge {
         align-self: flex-start;
-        background-color: #ffcf3160;
         border-radius: 6px;
+
+    }
+
+    .pendiente {
+        --background: #ff313160;
+    }
+
+    .resuelta {
+        --background: #31ff3160;
     }
 }
+
 
 
 .title h1 {
@@ -94,10 +103,21 @@ ion-footer {
 
     ion-toolbar {
         --background: #172033;
-    }
 
-    .add-button {
-        color: #ffffff;
-        padding: 30px;
+        ion-button {
+            --background: transparent;
+            --box-shadow: none;
+
+
+        }
+
+        .add-button {
+            color: #ffffff;
+            padding: 30px;
+
+            p {
+                color: white;
+            }
+        }
     }
 }

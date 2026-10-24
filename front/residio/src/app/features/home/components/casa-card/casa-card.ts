@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { IonCardContent, IonIcon, IonItem, IonBadge, IonLabel } from '@ionic/angular';
+import { Casa } from '../../../../core/domain/Casa';
 
 @Component({
   selector: 'app-casa-card',
@@ -9,5 +10,7 @@ import { IonCardContent, IonIcon, IonItem, IonBadge, IonLabel } from '@ionic/ang
   styleUrl: './casa-card.scss',
 })
 export class CasaCard {
+  
+  @Input() casa!: Casa;
 
 }

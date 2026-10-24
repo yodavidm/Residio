@@ -6,8 +6,8 @@
             <div class="casa">
                 <ion-icon name="home-outline"></ion-icon>
                 <div class="casa-movil">
-                    <h3>Calle Mayor 12</h3>
-                    <h4>3 Inquilinos</h4>
+                    <h3>{{casa.direccion}}</h3>
+                    <h4>{{casa.inquilinos}} Inquilinos</h4>
                 </div>
             </div>
 
@@ -23,11 +23,11 @@
                 <ion-icon name="funnel-outline"></ion-icon>
             </div>
 
-            <div class="cards-movil" routerLink="/incidencia">
-                <app-casa-detail-card></app-casa-detail-card>
-                <app-casa-detail-card></app-casa-detail-card>
-                <app-casa-detail-card></app-casa-detail-card>
+            @for (incidencia of incidencias; track incidencia.id) {
+            <div class="cards-movil" [routerLink]="['incidencia', incidencia.id]">
+                <app-casa-detail-card [incidencia]="incidencia"></app-casa-detail-card>
             </div>
+            }
         </div>
 
     </div>

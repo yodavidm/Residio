@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { CasaCard } from './components/casa-card/casa-card';
 import {
   IonHeader,
@@ -7,30 +7,37 @@ import {
   IonButton,
   IonContent
 } from '@ionic/angular';
-import { Nav } from '../../core/nav/nav';
+import { Casa } from '../../core/domain/Casa';
+import { CasaService } from '../service/casa.service';
 @Component({
   selector: 'app-home',
-  imports: [IonHeader,
+  imports: [
     IonToolbar,
     IonTitle,
     IonButton,
     IonContent,
-    CasaCard, Nav],
+    CasaCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
 export class Home implements OnInit {
+
+  private casaService: CasaService = inject(CasaService);
+
   ngOnInit(): void {
     this.getMensajes();
-    console.log(this.getMensajes);
-
+    this.getCasas();
   }
+
+  casas: Casa[] = [];
 
   mensajeTitulo: string = '';
   mensajeIncidencias: string = '';
   totalIncidencias: number = 3;
 
   claseTitulo: string = '';
+
+  @Input() casa!: Casa;
 
   private getMensajes() {
     if (this.totalIncidencias === 0) {
@@ -46,5 +53,13 @@ export class Home implements OnInit {
       this.claseTitulo = 'rojo';
       this.mensajeIncidencias = 'Se acumulan las incidencias.';
     }
+  }
+
+  getCasas() {
+    this.casaService.getCasas().subscribe({
+      next: (data) => {
+        this.casas = data;
+      }
+    })
   }
 }
